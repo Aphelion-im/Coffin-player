@@ -1,0 +1,257 @@
+/* https://heropatterns.com
+*/
+
+@font-face {
+  font-family: 'fair_prosperregular';
+  src: url('../fonts/fair_prosper-webfont.woff2') format('woff2'),
+    url('../fonts/fair_prosper-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --chappieblue: #B3D6DC;
+  --chappieblue2: #1f578e;
+  --chappieblue3: #49adf4;
+  --chappiedred: #fe8075;
+  --fontColor1: #333;
+
+  /* Box shadow */
+  --blur: 1.26px;
+  --spread: -0.9px;
+  --horiz: 0.554095px;
+  --vert: 0.70921px;
+}
+
+html {
+  font-size: 100%;
+  color: var(--chappieblue2);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--chappieblue);
+}
+
+.cs-shadow {
+  box-shadow: calc(clamp(0px, var(--horiz), 2px))
+      calc(clamp(0px, var(--vert), 2px)) 2px calc(var(--spread))
+      rgba(0, 0, 0, 0.233),
+    calc(2 * var(--horiz)) calc(2 * var(--vert)) calc(var(--blur))
+      calc(var(--spread)) rgba(0, 0, 0, 0.2),
+    calc(3 * var(--horiz)) calc(3 * var(--vert)) calc(var(--blur))
+      calc(var(--spread)) rgba(0, 0, 0, 0.123),
+    calc(5 * var(--horiz)) calc(5 * var(--vert)) calc(var(--blur))
+      calc(var(--spread)) rgba(0, 0, 0, 0.076),
+    calc(8 * var(--horiz)) calc(8 * var(--vert)) calc(var(--blur))
+      calc(var(--spread)) rgba(0, 0, 0, 0.047),
+    calc(13 * var(--horiz)) calc(13 * var(--vert)) calc(var(--blur))
+      calc(var(--spread)) rgba(0, 0, 0, 0.028);
+  border: 10px solid rgba(0, 0, 0, 0.068);
+}
+
+.inset-shadow {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+}
+
+main {
+  border-radius: 50% 50% 25px 25px;
+  border: 2px solid var(--chappieblue2);
+  height: 375px;
+  width: 90vw;
+  max-width: 375px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231f578e' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+main img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  transition: transform 0.5s ease-in;
+  cursor: pointer;
+}
+
+main img:hover {
+  transform: scale(1.1);
+  transform: scaleX(-1);
+}
+
+.mainPlayer {
+  width: 500px;
+}
+
+button {
+  background-color: transparent;
+  color: var(--chappieblue2);
+  margin: 5px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s ease-in;
+}
+
+button:hover {
+  filter: brightness(125%);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+h1 {
+  font-family: 'fair_prosperregular', Roboto, sans-serif;
+  font-size: 2.5rem;
+  color: var(--chappieblue2);
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--chappiedred);
+  margin: 4px 0;
+}
+
+/* Progress bar horizontal */
+.progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid var(--chappieblue2);
+  border-radius: 8px;
+  height: 16px;
+  width: 192px;
+  cursor: pointer;
+  overflow: auto;
+  outline: none;
+  margin: 8px auto;
+  background-color: whitesmoke;
+}
+
+.progress::-webkit-progress-bar {
+  background-color: whitesmoke;
+  box-shadow: 12px 10px 5px -5px rgba(0,0,0,0.3) inset;
+  -webkit-box-shadow: 12px 10px 5px -5px rgba(0,0,0,0.3) inset;
+  -moz-box-shadow: 12px 10px 5px -5px rgba(0,0,0,0.3) inset;
+}
+
+.progress::-webkit-progress-value,
+.progress[value] {
+  background-color: var(--chappieblue3);
+  transition: all 0.1s linear;
+}
+
+/* Volume control */
+.progressVolume {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 8px;
+  border: 2px solid var(--chappieblue2);
+  bottom: 61px;
+  cursor: pointer;
+  height: 16px;
+  margin: 8px auto;
+  overflow: hidden;
+  position: absolute;
+  right: -23px;
+  width: 80px;
+  transform-origin: bottom;
+  transform: rotate(270deg); /* Original element should be horizontal */
+}
+
+.progressVolume::-webkit-progress-bar {
+  background-color: whitesmoke;
+}
+
+.progressVolume::-webkit-progress-value,
+.progressVolume[value] {
+  background-color: var(--chappieblue3);
+  transition: all 0.1s linear;
+}
+
+.volumeIcon {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.volumeIcon:hover {
+  filter: brightness(125%);
+}
+
+.volumeIcon:active {
+  transform: translateY(2px);
+}
+
+.volumeDisplay {
+  position: absolute;
+  right: 12px;
+  bottom: 112px;
+  font-size: 0.7rem;
+}
+
+.songPlayingNumber {
+  font-size: 0.9rem;
+  font-weight: 700;
+  position: absolute;
+  left: 15%;
+  top: 82px;
+  /* text-decoration: underline dotted; */
+}
+
+.appVersion {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 8px;
+}
+
+.displayCurrentTime {
+  margin-top: 16px;
+}
+
+.download {
+  color: var(--chappieblue2);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+}
+
+.download:hover {
+  filter: brightness(125%);
+}
+
+.download:active {
+  transform: translateY(2px);
+}
