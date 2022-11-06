@@ -1,6 +1,6 @@
 # Dr. Chappie's Coffin Player
 
-Updated: 5-11-2022
+Updated: 6-11-2022
 
 Just a fun project for my good friend Mike.
 
@@ -17,6 +17,7 @@ Just a fun project for my good friend Mike.
 - isNaN(); true/false
 - <progress> and <meter>
 - Must have a value (= truthy) before displaying something. If NaN, null, undefined, 0, etc. (= falsey): do nothing.
+- font-display: swap; 
 
 
 ## Google Lighthouse Analysis
@@ -54,7 +55,24 @@ Rewritten code:
 ```
 
 ```html
-HTML tags <progress>and <meter>are even better.</meter></progress>
+HTML tags <progress> and <meter>are even better.</meter></progress>
 ```
 
 After implementing the progress- and volumebar with the progress tag, Google Lighthouse didn't show the CLS message as described above.
+
+## Ensure text remains visible during webfont load
+
+- [Ensure text remains visible during webfont load](https://web.dev/font-display/)
+
+Google Lighthouse says:
+> The easiest way to avoid showing invisible text while custom fonts load is to temporarily show a system font. By including font-display: swap in your @font-face style, you can avoid FOIT (Flash Of Invisible Text) in most modern browsers.
+
+```css
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+  font-display: swap;
+}
+```
