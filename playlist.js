@@ -467,4 +467,18 @@ const songs = [
     filename:
       'Coffin Dance Chutney version Baithak Gana by SRMUSIC.mp3',
   },
+  {
+    id: 77,
+    displayName: 'In Arabaic (Rrz Remix)',
+    artist: 'Unknown',
+    filename:
+      'Coffin Dance meme in Arabic (EeZ Remix).mp3',
+  },
+  {
+    id: 78,
+    displayName: 'Instrumental Guzheng Cover',
+    artist: 'Unknown',
+    filename:
+      'Coffin Dance - Instrumental Guzheng Cover.mp3',
+  },
 ];
