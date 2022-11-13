@@ -18,6 +18,7 @@ Just a fun project for my good friend Mike.
 - <progress> and <meter>
 - Must have a value (= truthy) before displaying something. If NaN, null, undefined, 0, etc. (= falsey): do nothing.
 - font-display: swap; 
+- CSS clamp(val1, preferred val, val3);
 
 
 ## Google Lighthouse Analysis

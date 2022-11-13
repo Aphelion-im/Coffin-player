@@ -469,7 +469,7 @@ const songs = [
   },
   {
     id: 77,
-    displayName: 'In Arabaic (Rrz Remix)',
+    displayName: 'In Arabaic (EeZ Remix)',
     artist: 'Unknown',
     filename:
       'Coffin Dance meme in Arabic (EeZ Remix).mp3',
