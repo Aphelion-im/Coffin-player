@@ -1,8 +1,11 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/88479bab-644b-418b-bec5-e04269b91cae/deploy-status)](https://app.netlify.com/sites/dr-chappies-memory/deploys)
 # Dr. Chappie's Coffin Player
 
-Updated: 6-11-2022
+Updated: 16-3-2024
 
-Just a fun project for my good friend Mike.
+Just a fun project for a good friend of mine.
+
+![Screenshot](./assets/dr-chappie-s-coffin-player.jpg)
 
 ## Highlights of this project
 
