@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/88479bab-644b-418b-bec5-e04269b91cae/deploy-status)](https://app.netlify.com/sites/dr-chappies-memory/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60448892-4acd-4121-994c-7a42fa449fcc/deploy-status)](https://app.netlify.com/sites/coffin-player/deploys)
 # Dr. Chappie's Coffin Player
 
 Updated: 16-3-2024
